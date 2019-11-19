@@ -1,0 +1,139 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	background-color: #fdf0f2;
+}
+body {
+	font-family: arial, Helvetica, sans-serif;
+	margin: 0;
+}
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #e6e6fa;
+  color: darkviolet;
+}
+
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+  padding: 1;
+  text-transform: uppercase;
+  line-height: 0.85;
+  color: darkviolet;
+  letter-spacing: .1em;
+    text-shadow: 
+      0 -1px 0 darkviolet, 
+      0 1px 0 purple, 
+      0 2px 0 darkviolet, 
+      0 3px 0 purple, 
+      0 4px 0 darkviolet, 
+      0 5px 0 purple, 
+      0 6px 0 darkviolet, 
+      0 7px 0 purple, 
+      0 8px 0 darkviolet, 
+      0 9px 0 purple, 
+      0 10px 0 darkviolet, 
+      0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+div {
+  animation-duration: 2s;
+  animation-name: bounceIn;
+}
+main {
+	 -ms-flex: 70%;
+  flex: 70%;
+  font-size: 1em;
+  color: darkviolet;
+  padding: 10px 5px 15px 20px;
+  border-top: 50px solid white;
+  border-bottom: 50px solid white;
+}
+
+div.main {
+  width:100%;
+  overflow:hidden;
+}
+div.main p {
+  animation: 10s slide-right;
+}
+
+@keyframes main {
+  from {
+    margin-left: -100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+section {
+	margin: 0;
+	padding:1px;
+}
+h1 {
+	font-size: 4em;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+h2{
+	font-size: 1em;
+	line-height: 200%;
+}
+
+h3 {
+	padding: 0;
+	margin-left: 10px;
+}
+p {
+	 margin-left: 10px;
+}
+
+.toggle{
+	cursor: pointer;
+}
+
+.toggle p{
+	opacity: 0;
+	transition: all 0.5s;
+	transition-delay: 0.5s;
+	height: 0;
+	overflow: hidden;
+	transform: translateX(-1em);
+}
+
+.show p{
+	opacity: 1;
+	height: auto;
+	overflow: visible;
+	transform: translateX(0);
+}
+
+.toggle h3{
+	transition: all 0.5s;
+}
+
+.show h3{
+	color: darkviolet;
+	transform: translateY(-0.5em);
